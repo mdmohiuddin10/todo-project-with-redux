@@ -65,6 +65,7 @@ const TodoCard = ({ title, description, id, isCompleted }: TTodoCardProps) => {
           </svg>
         </Button>
       </div>
+      <p>hello</p>
     </div>
   );
 };
