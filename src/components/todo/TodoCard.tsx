@@ -1,17 +1,19 @@
 import { Button } from '../ui/button';
-import { removeTodo } from '@/redux/features/todoSlice';
+// import { removeTodo } from '@/redux/features/todoSlice';
 
 type TTodoCardProps = {
-  id: string;
+  id ?: string;
   title: string;
   description: string;
   isCompleted?: boolean;
 };
 
-const TodoCard = ({ title, description, id, isCompleted }: TTodoCardProps) => {
+const TodoCard = ({ title, description, isCompleted }: TTodoCardProps) => {
   const toggleState = () => {
     console.log('Toggle');
   };
+
+  // id hide from todoCard distructure by mohiuddin
 
   return (
     <div className="bg-white rounded-md flex justify-between items-center p-3 border">
@@ -22,6 +24,7 @@ const TodoCard = ({ title, description, id, isCompleted }: TTodoCardProps) => {
         id="complete"
       />
       <p className="font-semibold">{title}</p>
+      <p className="font-semibold">{description}</p>
       {/* <p>Time</p> */}
       <div>
         {isCompleted ? (
